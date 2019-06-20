@@ -1,12 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+ import './index.css'
+ import React from 'react'; 
+ import ReactDOM from 'react-dom'; 
+ import ResultDisplay from './ResultDisplay'
+ import Keypad from './Keypad'; 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ class App extends React.Component {
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    constructor(props) {
+        super(props); 
+        this.state = { result : "HELLO"};
+
+        setTimeout( () =>  {
+            this.setState ({result : "SONATA"})
+        }, 3000);
+    }
+
+     render() {
+        return (
+            <div className="container">
+                <div className="calc-body">
+                    <ResultDisplay result={this.state.result}/>
+                    <Keypad /> 
+                </div>
+            </div>
+        );
+     }
+ }
+
+ ReactDOM.render(<App />, document.querySelector('#root'));
+
+

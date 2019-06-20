@@ -1,0 +1,25 @@
+.calc-screen {
+    background: #3A4655;
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+  }
+  
+  .calc-operation {
+    text-align: right;
+    color: #727B86;
+    font-size: 21px;
+    padding-bottom: 10px;
+    border-bottom: dotted 1px;
+  }
+  
+  .calc-typed {
+    margin-top: 20px;
+    font-size: 45px;
+    text-align: right;
+    color: #fff;
+  }
+  
+  .blink-me {
+    color: #E0B612;
+  }
